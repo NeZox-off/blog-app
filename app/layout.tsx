@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { cn } from "@/src/lib/utils";
+import { Layout } from "@/src/components/shared/layout";
 
 const interExtrabold = localFont({
   src: "./fonts/Inter_18pt-ExtraBold.ttf",
@@ -43,7 +44,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn(...fontsStyles, "antialiased")}>{children}</body>
+      <body className={cn(...fontsStyles, "antialiased")}>
+        <Layout>{children}</Layout>
+      </body>
     </html>
   );
 }

@@ -4,9 +4,12 @@
 
 
 @layer base {
+  * {
+    @apply box-border p-0 m-0;   
+  }
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-inter-semibold);
-    @apply font-semibold;
+    @apply font-semibold text-balance;
   }
   body {
     @apply text-white bg-black;
