@@ -1,4 +1,7 @@
+"use client";
+import { cn } from "@/src/lib/utils";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React, { FC } from "react";
 
 interface navigationProps extends React.HTMLProps<HTMLDivElement> {
@@ -11,20 +14,30 @@ interface navigationProps extends React.HTMLProps<HTMLDivElement> {
 export const Navigation: FC<navigationProps> = ({
   navList,
   type,
-  classListItem = '',
-  classListItemLik= '',
+  classListItem = "",
+  classListItemLik = "",
   ...props
 }) => {
+  const pathname = usePathname();
   return (
     <nav {...props}>
       {React.createElement(
         type,
         {
-            className: "flex items-center "
+          className: "flex items-center",
         },
         navList.map(([title, url], index) => (
-          <li key={index} className={classListItem}>
-            <Link href={url} className={classListItemLik}>{title}</Link>
+          <li key={index} className={cn(classListItem)}>
+            <Link
+              href={url}
+              className={cn(
+                'px-5 py-3 rounded-2xl',
+                classListItemLik,
+                pathname === url ? "bg-[#222] text-white" : ""
+              )}
+            >
+              {title}
+            </Link>
           </li>
         ))
       )}
