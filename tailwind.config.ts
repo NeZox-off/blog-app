@@ -14,11 +14,11 @@ const config: Config = {
         foreground: "var(--foreground)",
       },
       backgroundColor: {
-        'blog-yellow': "#F5E876",
+        "blog-yellow": "#F5E876",
         "blog-dark": "#222",
-      }
+      },
     },
   },
-  plugins: [],
+  plugins: [require("@eioluseyi/tailwind-fade")],
 };
 export default config;
