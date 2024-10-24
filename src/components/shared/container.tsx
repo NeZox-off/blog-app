@@ -9,7 +9,7 @@ export const Container: FC<ContainerProps> = ({
   ...props
 }) => {
   return (
-    <div className={cn("container mx-auto", className)} {...props}>
+    <div className={cn("container mx-auto px-4", className)} {...props}>
       {children}
     </div>
   );

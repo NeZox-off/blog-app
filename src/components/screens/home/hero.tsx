@@ -3,6 +3,7 @@ import { Section } from "../../shared/section";
 import { Container } from "../../shared/container";
 import { Button } from "../../ui/button";
 import { Icon } from "../../ui/icon";
+import Image from "next/image";
 
 interface heroProps {}
 
@@ -25,8 +26,7 @@ export const Hero: FC<heroProps> = () => {
           </Button>
         </div>
       </Container>
-      <div className="absolute bg-white w-full"></div>
-      <div className="absolute bg-white w-full bottom-0"></div>
+      <Image src={'/svg/lines.svg'} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="hidden md:block -z-[1]" alt="Lines svg"  />
     </Section>
   );
 };

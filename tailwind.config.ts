@@ -13,6 +13,10 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      backgroundColor: {
+        'blog-yellow': "#F5E876",
+        "blog-dark": "#222",
+      }
     },
   },
   plugins: [],

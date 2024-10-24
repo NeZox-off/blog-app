@@ -24,16 +24,16 @@ export const Navigation: FC<navigationProps> = ({
       {React.createElement(
         type,
         {
-          className: "flex items-center",
+          className: "flex items-center gap-3",
         },
         navList.map(([title, url], index) => (
           <li key={index} className={cn(classListItem)}>
             <Link
               href={url}
               className={cn(
-                'px-5 py-3 rounded-2xl',
+                'px-5 py-3 rounded-2xl transition-all hover:opacity-80',
                 classListItemLik,
-                pathname === url ? "bg-[#222] text-white" : ""
+                pathname === url ? "bg-blog-dark text-white" : "hover:bg-blog-dark"
               )}
             >
               {title}
