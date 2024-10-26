@@ -3,7 +3,6 @@ import { Section } from "../../shared/section";
 import { Container } from "../../shared/container";
 import { Button } from "../../ui/button";
 import { Icon } from "../../ui/icon";
-import Image from "next/image";
 
 interface heroProps {}
 
@@ -21,12 +20,11 @@ export const Hero: FC<heroProps> = () => {
               продуктивність і нові виклики у світі IT.
             </p>
           </div>
-          <Button>
+          <Button className="rounded-2xl">
             Блог <Icon name="ChevronRight" />
           </Button>
         </div>
       </Container>
-      <Image src={'/svg/lines.svg'} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="hidden md:block -z-[1]" alt="Lines svg"  />
     </Section>
   );
 };

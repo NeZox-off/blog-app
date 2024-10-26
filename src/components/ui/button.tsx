@@ -8,13 +8,22 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default: "bg-white hover:bg-white/80",
-        yellow: "bg-blog-yellow hover:bg-opacity-80"
+        yellow: "bg-blog-yellow hover:bg-opacity-80",
+        none: null
+      },
+      rounded: {
+        default: "rounded-2xl",
+        sm: "rounded-sm",
+        md: "rounded-md",
+        lg: "rounded-lg",
+        full: "rounded-full"
       },
       size: {
-        default: "px-8 py-2 rounded-2xl",
+        default: "px-8 py-2",
         sm: "h-9 rounded-md px-3",
         lg: "h-11 rounded-md px-8",
         icon: "h-10 w-10",
+        none: null
       },
     },
     defaultVariants: {
@@ -31,10 +40,10 @@ export interface ButtonProps
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, ...props }, ref) => {
+  ({ className, variant, size, rounded, ...props }, ref) => {
     return (
       <button
-        className={cn(buttonVariants({ variant, size, className }))}
+        className={cn(buttonVariants({ variant, size, rounded, className }))}
         ref={ref}
         {...props}
       />

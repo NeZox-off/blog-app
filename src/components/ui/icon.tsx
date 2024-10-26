@@ -17,7 +17,7 @@ export const Icon = memo(({ name, className, strokeWidth }: IconProps) => {
 
   return (
     <IconComponent
-      className={cn("size-4 lg:size-5", className)}
+      className={cn("size-4", className)}
       strokeWidth={strokeWidth || 2.5}
     />
   );

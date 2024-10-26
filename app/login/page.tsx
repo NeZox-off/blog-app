@@ -1,7 +1,14 @@
+import { Hero } from "@/src/components/screens/login/hero";
 import React, { FC } from "react";
 
 interface pageProps {}
 
-export const Page: FC<pageProps> = ({}) => {
-  return <div>page</div>;
+const Page: FC<pageProps> = ({}) => {
+  return (
+    <React.Fragment>
+      <Hero />
+    </React.Fragment>
+  );
 };
+
+export default Page;

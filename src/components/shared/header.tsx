@@ -10,9 +10,12 @@ interface headerProps {}
 
 export const Header: FC<headerProps> = ({}) => {
   return (
-    <header className="py-4 top-5 fixed w-full z-30 backdrop-blur-sm">
-      <Container className="flex justify-between">
-        <Link href={"/"} className="inline-flex justify-center items-center h-14 w-14 rounded-2xl bg-white text-black">
+    <header className="top-5 fixed w-full z-30">
+      <Container className="flex justify-between backdrop-blur-sm py-4">
+        <Link
+          href={"/"}
+          className="inline-flex justify-center items-center h-14 w-14 rounded-2xl bg-white text-black"
+        >
           <Icon name="PenTool" />
         </Link>
         <div className="flex items-center gap-5">
@@ -25,7 +28,11 @@ export const Header: FC<headerProps> = ({}) => {
               ["Блог", "/blog"],
             ]}
           />
-          <Button className="font-semibold" variant={'yellow'}>Ввійти</Button>
+          <Link href={"/login"}>
+            <Button className="font-semibold rounded-2xl" variant={"yellow"}>
+              Ввійти
+            </Button>
+          </Link>
         </div>
       </Container>
     </header>

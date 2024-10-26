@@ -11,8 +11,11 @@
     font-family: var(--font-inter-semibold);
     @apply font-semibold text-balance;
   }
+  html {
+    @apply scroll-smooth;
+  }
   body {
-    @apply text-white bg-black;
+    @apply text-white bg-black bg-[url('/svg/grids.svg')] bg-no-repeat bg-cover;
     font-family: var(--font-inter-medium);
   }
   a {

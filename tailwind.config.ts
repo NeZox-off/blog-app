@@ -12,6 +12,12 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        "blog-yellow": "#F5E876",
+        "blog-dark": "#222",
+      },
+      borderColor: {
+        "blog-yellow": "#F5E876",
+        "blog-dark": "#222",
       },
       backgroundColor: {
         "blog-yellow": "#F5E876",
